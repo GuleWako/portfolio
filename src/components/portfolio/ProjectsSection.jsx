@@ -32,9 +32,9 @@ const projects = [
     type: "solo",
   },
   {
-    title: "AI Customs Management",
+    title: "ABCMS",
     description: "An AI-powered customs management system for streamlining import/export processing, automated document verification, and intelligent risk assessment.",
-    platform: "AI • FULL-STACK",
+    platform: "FULL-STACK",
     tags: ["AI/ML", "PYTHON", "REACT", "NODE.JS"],
     image: "https://media.base44.com/images/public/6a252a130a6d44cc87309d9e/6c655b8a7_generated_image.png",
     role: "Team Contributor",
