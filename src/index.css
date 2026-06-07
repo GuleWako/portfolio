@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-    --font-family: 'Urbanist', sans-serif;
-    --breakpoint-3xl: 1920px;
-    --color-primary: #8DFF69;
+    --font-display: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --color-background: #08111d;
+    --color-foreground: #f4f7f0;
+    --color-muted-foreground: #737373;
+    --color-card: #111b2a;
+    --color-border: #243042;
+
+    --color-primary: #1077a3;
+    --color-accent: #e8b73b;
 }
 
 @layer base {
@@ -12,96 +21,105 @@
         font-family: var(--font-display);
         scroll-behavior: smooth;
     }
+
     body {
-        --webkit-font-smoothing: antialiased;
-        --moz-osx-font-smoothing: grayscale;
-        background-color: #000000;
-        color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+
         overflow-x: hidden;
     }
 
-    /* Custom Scollbar */
+    * {
+        border-color: var(--color-border);
+    }
+
+    /* Custom Scrollbar */
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 8px;
     }
 
     ::-webkit-scrollbar-track {
-        background: #0a0a0a;
+        background: var(--color-background);
     }
 
     ::-webkit-scrollbar-thumb {
-        background: linear-gradient(180deg, #8DFF69, #6FE047);
-        border-radius: 5px;
+        background: rgba(16, 119, 163, 0.4);
+        border-radius: 999px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(180deg, #A8FF8D, #5BC92E);
+        background: rgba(16, 119, 163, 0.6);
     }
 
     /* Firefox Scrollbar */
     * {
         scrollbar-width: thin;
-        scrollbar-color: #6FE047 #0a0a0a;
+        scrollbar-color: rgba(16, 119, 163, 0.6) var(--color-background);
     }
 
-    /* Hide Scrollbar for carousel */
-    .hiden-scrollbar{
+    /* Hide Scrollbar */
+    .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
 
-    .hiden-scrollbar::-webkit-scrollbar {
+    .hide-scrollbar::-webkit-scrollbar {
         display: none;
     }
+}
 
-    /* Animation Keyframes */
-    @keyframes fadeIn {
-        from 
-        { opacity: 0; }
-        to 
-        { opacity: 1; }
-    }
+/* Glass Effect */
+.glass {
+    background: rgba(17, 27, 42, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(36, 48, 66, 0.5);
+}
 
-    @keyframes pulse {
-        0% , 100% {
-            opacity: 0.3;
-        }
-        50% {
-           opacity: 0.5;
-        }
-        
-    }
+.glass-light {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-    /* Utility Classes */
-    .animate-fadeIn {
-        animation: fadeIn 0.5s ease-out;
-    }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-    .animate-pulse {
-        animation: pulse 3s ease-in-out infinite;
-    }
+@keyframes pulseSoft {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
 
-    .animate-spin-slow {
-        animation: spin 8s linear infinite;
-    }
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+}
 
-    @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
+.animate-pulse-soft {
+    animation: pulseSoft 3s ease-in-out infinite;
+}
 
-    /* Line Clamp */
-    .line-clamp-2 {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
-    }
+.animate-spin-slow {
+    animation: spin 8s linear infinite;
+}
 
-    .line-clamp-3 {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
-    }
+/* Text Clamp */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

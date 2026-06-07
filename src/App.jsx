@@ -1,18 +1,16 @@
-import React from 'react'
-import NavBar from './components/layout/NavBar'
-import Hero from './components/sections/Hero'
-import About from './components/sections/About'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PageNotFound from './lib/PageNotFound';
+import Home from './pages/Home.jsx'
+// Add page imports here
 
-const App = () => {
-  return (
-    <div className='min-h-screen bg-black pb-[100vh'>
-      <NavBar />
-      <div>
-        <Hero />
-        <About/>
-      </div>
-    </div>
-  )
+function App() {
+
+    return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+  );
 }
 
 export default App
