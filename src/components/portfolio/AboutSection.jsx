@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { MapPin, Clock, Coffee, Code2, Briefcase, GraduationCap } from "lucide-react";
 
 const SKYLINE_IMG = "https://media.base44.com/images/public/6a252a130a6d44cc87309d9e/7acdeece5_generated_bd81da44.png";
@@ -46,27 +46,27 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.p
+        <Motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="font-mono text-xs tracking-[0.3em] text-primary mb-4"
         >
           THE PERSON
-        </motion.p>
-        <motion.h2
+        </Motion.p>
+        <Motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-[-0.04em] mb-16"
         >
           About Me
-        </motion.h2>
+        </Motion.h2>
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[180px]">
           {/* Bio - Large card */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -95,10 +95,10 @@ export default function AboutSection() {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </Motion.div>
 
           {/* Clock Widget */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -106,10 +106,10 @@ export default function AboutSection() {
             className="row-span-1"
           >
             <AddisClockWidget />
-          </motion.div>
+          </Motion.div>
 
           {/* Skyline */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -127,11 +127,11 @@ export default function AboutSection() {
                 HOME BASE
               </p>
             </div>
-          </motion.div>
+          </Motion.div>
 
           {/* Stats */}
           {stats.map((stat, i) => (
-            <motion.div
+            <Motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ export default function AboutSection() {
                   {stat.label.toUpperCase()}
                 </p>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>

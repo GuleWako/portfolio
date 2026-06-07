@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as M } from "framer-motion";
 import { ArrowDown, MapPin } from "lucide-react";
 
 const coreTruths = [
@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center min-h-[80vh]">
           
           {/* Left - Portrait */}
-          <motion.div
+          <M.div
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -44,7 +44,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
               
               {/* Location badge */}
-              <motion.div
+              <M.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
@@ -54,54 +54,54 @@ export default function HeroSection() {
                 <span className="text-xs font-mono tracking-wider text-foreground/80">
                   ADDIS ABABA, ET
                 </span>
-              </motion.div>
+              </M.div>
             </div>
 
             {/* Decorative teal line */}
-            <motion.div
+            <M.div
               initial={{ scaleY: 0 }}
               animate={{ scaleY: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="absolute -left-4 top-8 bottom-8 w-[2px] bg-gradient-to-b from-primary via-primary/50 to-transparent origin-top hidden lg:block"
             />
-          </motion.div>
+          </M.div>
 
           {/* Right - Content */}
-          <motion.div
+          <M.div
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="order-1 lg:order-2 flex flex-col justify-center"
           >
-            <motion.p
+            <M.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
               className="font-mono text-xs tracking-[0.3em] text-primary mb-6"
             >
               FULL-STACK &amp; iOS SOFTWARE ENGINEER
-            </motion.p>
+            </M.p>
 
             <h1 className="font-heading font-black text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] tracking-[-0.04em] mb-8">
-              <motion.span
+              <M.span
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 className="block text-foreground"
               >
                 Guluma
-              </motion.span>
-              <motion.span
+              </M.span>
+              <M.span
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
                 className="block text-accent"
               >
                 Wakuma
-              </motion.span>
+              </M.span>
             </h1>
 
-            <motion.p
+            <M.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -109,20 +109,20 @@ export default function HeroSection() {
             >
               I build high-quality, scalable web and native iOS applications 
               that deliver exceptional user experiences — from concept to production.
-            </motion.p>
-            <motion.p
+            </M.p>
+            <M.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="text-sm font-mono text-primary/80 max-w-lg mb-10 border-l-2 border-primary/40 pl-4 italic leading-relaxed"
             >
               "Code with clarity, build for purpose, innovate with passion."
-            </motion.p>
+            </M.p>
 
             {/* Core Truths */}
             <div className="flex flex-wrap gap-2 mb-12">
               {coreTruths.map((truth, i) => (
-                <motion.span
+                <M.span
                   key={truth}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -130,26 +130,26 @@ export default function HeroSection() {
                   className="px-3 py-1.5 text-[10px] font-mono tracking-widest border border-border rounded-full text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors cursor-default"
                 >
                   {truth}
-                </motion.span>
+                </M.span>
               ))}
             </div>
 
             {/* Scroll indicator */}
-            <motion.div
+            <M.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
               className="flex items-center gap-3 text-muted-foreground"
             >
-              <motion.div
+              <M.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ repeat: Infinity, duration: 2 }}
               >
                 <ArrowDown size={16} />
-              </motion.div>
+              </M.div>
               <span className="text-xs font-mono tracking-widest">SCROLL TO EXPLORE</span>
-            </motion.div>
-          </motion.div>
+            </M.div>
+          </M.div>
         </div>
       </div>
     </section>

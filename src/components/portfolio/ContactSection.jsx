@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { Send, Github, Linkedin, Mail, Terminal, MessageCircle, Facebook, Instagram } from "lucide-react";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 import { toast } from "sonner";
 
 const socials = [
-  { icon: Github, label: "GitHub", href: "https://github.com/GuleWako" },
+  { icon: Github, label: "GitHub", href: "https://github.com//gulumawakuma" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/guluma-wakuma-olansa" },
   { icon: Mail, label: "Email", href: "mailto:gulumawakuma3@gmail.com" },
   { icon: MessageCircle, label: "Telegram", href: "https://t.me/gule_wako" },
@@ -35,15 +35,15 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
           <div>
-            <motion.p
+            <Motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="font-mono text-xs tracking-[0.3em] text-primary mb-4"
             >
               GET IN TOUCH
-            </motion.p>
-            <motion.h2
+            </Motion.p>
+            <Motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -51,8 +51,8 @@ export default function ContactSection() {
             >
               Let's Build<br />
               <span className="text-accent">Together</span>
-            </motion.h2>
-            <motion.p
+            </Motion.h2>
+            <Motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -62,12 +62,12 @@ export default function ContactSection() {
               Whether you need a scalable web platform, a native iOS app, or a technical 
               partner for your next venture — I'm ready to collaborate. Drop me a message 
               and let's create something exceptional.
-            </motion.p>
+            </Motion.p>
 
             {/* Social Links */}
             <div className="flex flex-wrap gap-3">
               {socials.map((s, i) => (
-                <motion.a
+                <Motion.a
                   key={s.label}
                   href={s.href}
                   target="_blank"
@@ -81,10 +81,10 @@ export default function ContactSection() {
                   title={s.label}
                 >
                   <s.icon size={18} />
-                </motion.a>
+                </Motion.a>
               ))}
             </div>
-            <motion.a
+            <Motion.a
               href="https://wa.me/+251934437389"
               target="_blank"
               rel="noopener noreferrer"
@@ -97,11 +97,11 @@ export default function ContactSection() {
             >
               <MessageCircle size={15} />
               WhatsApp: +251 934 437 389
-            </motion.a>
+            </Motion.a>
           </div>
 
           {/* Right - Terminal Form */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -186,7 +186,7 @@ export default function ContactSection() {
                 </Button>
               </form>
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </section>
