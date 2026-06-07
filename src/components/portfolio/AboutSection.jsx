@@ -36,10 +36,10 @@ function AddisClockWidget() {
 }
 
 const stats = [
-  { icon: Code2, label: "Projects Shipped", value: "40+" },
+  { icon: Code2, label: "Projects Shipped", value: "10+" },
   { icon: Coffee, label: "Cups of Buna", value: "∞" },
-  { icon: Briefcase, label: "Years Coding", value: "6+" },
-  { icon: GraduationCap, label: "CS Degree", value: "BSc" },
+  { icon: Briefcase, label: "Years Coding", value: "3+" },
+  { icon: GraduationCap, label: "CSE Degree", value: "BSc" },
 ];
 
 export default function AboutSection() {

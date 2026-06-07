@@ -120,7 +120,7 @@ export default function ContactSection() {
                 <div className="flex-1 text-center">
                   <span className="text-[10px] font-mono text-muted-foreground tracking-wider">
                     <Terminal size={10} className="inline mr-1" />
-                    contact@guluma.dev
+                    gulumawakuma3@gmail.com
                   </span>
                 </div>
               </div>
